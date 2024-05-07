@@ -1,24 +1,4 @@
 
-class Food {
-    constructor(canvasWidth, canvasHeight, foodWidth, foodHeight) {
-        this.canvasWidth = canvasWidth; // Canvas width
-        this.canvasHeight = canvasHeight; // Canvas height
-        this.foodWidth = foodWidth; // Food width
-        this.foodHeight = foodHeight; // Food height
-        this.image = new Image(); // Create new image element
-        this.image.src = "images/apple.png"; // Set image source to apple.png
-        this.respawn(); // Initialize food position
-    }
-
-    respawn() {
-        this.x = Math.random() * (this.canvasWidth - (this.foodWidth * 2)); // Random X position within canvas
-        this.y = Math.random() * (this.canvasHeight - (this.foodHeight * 2)); // Random Y position within canvas
-    }
-
-    draw(context) {
-        context.drawImage(this.image, this.x, this.y, this.foodWidth, this.foodHeight); // Draw food on canvas
-    }
-}
 
 class Snake {
     #context; // Canvas context
@@ -167,25 +147,5 @@ class Snake {
     };
 }
 
-class InputHandler {
-    constructor(snake) {
-        this.snake = snake; // Snake instance
-        document.addEventListener("keydown", this.handleKeyDown.bind(this)); // Add keydown event listener
-    }
-
-    handleKeyDown(event) {
-        const key = event.key.toLowerCase(); // Get pressed key
-
-        if (key === "arrowleft") {
-            this.snake.goLeft(); // Move snake left
-        } else if (key === "arrowright") {
-            this.snake.goRight(); // Move snake right
-        } else if (key === "arrowup") {
-            this.snake.goUp(); // Move snake up
-        } else if (key === "arrowdown") {
-            this.snake.goDown(); // Move snake down
-        }
-    }
-}
 
 new InputHandler(new Snake()); // Initialize game
