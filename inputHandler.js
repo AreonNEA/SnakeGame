@@ -1,4 +1,5 @@
-class InputHandler {
+
+export class InputHandler {
     constructor(snake) {
         this.snake = snake; // Snake instance
         document.addEventListener("keydown", this.handleKeyDown.bind(this)); // Add keydown event listener

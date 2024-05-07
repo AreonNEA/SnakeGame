@@ -1,5 +1,5 @@
 
-class Food {
+export class Food {
     constructor(canvasWidth, canvasHeight, foodWidth, foodHeight) {
         this.canvasWidth = canvasWidth; // Canvas width
         this.canvasHeight = canvasHeight; // Canvas height

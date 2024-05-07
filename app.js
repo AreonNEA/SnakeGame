@@ -146,6 +146,6 @@ class Snake {
         }
     };
 }
-
-
+import { Food } from "/food.js";
+import { InputHandler } from "/inputHandler.js"
 new InputHandler(new Snake()); // Initialize game
