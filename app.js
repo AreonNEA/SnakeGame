@@ -144,8 +144,12 @@ class Snake {
             this.#xDelta = 0; // Reset horizontal movement
             this.image.src = "images/down.png"; // Change snake head image
         }
+
     };
 }
-import { Food } from "/food.js";
+
+
 import { InputHandler } from "/inputHandler.js"
+import { Food } from "/food.js";
+
 new InputHandler(new Snake()); // Initialize game

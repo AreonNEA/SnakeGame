@@ -1,5 +1,5 @@
 
-export class Food {
+ export class Food {
     constructor(canvasWidth, canvasHeight, foodWidth, foodHeight) {
         this.canvasWidth = canvasWidth; // Canvas width
         this.canvasHeight = canvasHeight; // Canvas height
@@ -19,3 +19,6 @@ export class Food {
         context.drawImage(this.image, this.x, this.y, this.foodWidth, this.foodHeight); // Draw food on canvas
     }
 }
+
+ 
+ 
